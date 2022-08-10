@@ -15,7 +15,7 @@ function Footer() {
                 
             </div>
 
-            <p> &copy; { currentYear } https://juliorojas81871.github.io/</p>
+            <p> &copy; { currentYear } https://juliorojas81871.github.io/portfolio/</p>
         </div>
     );
 }
