@@ -1,5 +1,5 @@
 # Description:
-This code is a portfolio that use REact and material-ui
+This code is a portfolio that use React and material-ui
 If anyone want see this code, [please click at this link](https://juliorojas81871.github.io/.
 
 # Steps to get code to run:
