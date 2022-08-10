@@ -15,7 +15,7 @@ function App() {
         routs is used you where you want it to be*/}
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path='/projects/:id' element={<ProjectDisplay />} />
           <Route path="/experience" element={<Experience />} />
