@@ -7,6 +7,7 @@ If anyone want see this code, [please click at this link](https://juliorojas8187
 2. Type (You can also download the code):
 ```
 git clone https://github.com/juliorojas81871/portfolio
+'''
 
 3. Make sure that you are in the right folder, if not cd to it.
 
@@ -24,5 +25,5 @@ http://localhost:3000/
 ```
 
 # Example Pic:
-![Notes Example Pic](https://github.com/juliorojas81871/portfolio/blob/main/pics/main.jpg))
+![Notes Example Pic](https://github.com/juliorojas81871/portfolio/blob/main/pics/main.PNG))
 
