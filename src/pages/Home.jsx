@@ -11,11 +11,11 @@ function Home() {
         <h2>Hello, My Name is Julio Rojas</h2>
         <div className='prompt'> 
           <p>I am a software developer that love to learn and create</p>
-          <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank"><LinkedInIcon /></a>
+          <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
           <a onClick={() =>  navigator.clipboard.writeText('juliorojas81871@gmail.com')}>
                     <EmailIcon />
           </a>
-          <a href="https://github.com/juliorojas81871" target="_blank"><GithubIcon /></a>
+          <a href="https://github.com/juliorojas81871" target="_blank" rel="noreferrer"><GithubIcon /></a>
         </div>
       </div>
       <div className='skills'>

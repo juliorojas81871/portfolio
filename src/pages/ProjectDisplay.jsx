@@ -3,7 +3,7 @@ import '../styles/ProjectDisplay.css'
 import { useParams } from 'react-router-dom'
 import { ProjectList } from '../helpers/ProjectList'
 import GithubIcon from "@material-ui/icons/GitHub"
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 
 //this file will access the specfic project the user want
 function ProjectDisplay() {
@@ -16,8 +16,8 @@ function ProjectDisplay() {
             <img src={project.image} />
             <p><b>Skills: </b>{project.skills}</p>
             <div>
-                <a href={project.urlCode} target="_blank"><GithubIcon /></a>
-                <a href={project.urlLive} target="_blank" ><PlayArrowIcon /> </a>            
+                <a href={project.urlCode} target="_blank" rel="noreferrer"><GithubIcon /></a>
+                <a href={project.urlLive} target="_blank" rel="noreferrer"><PlayArrowIcon /> </a>            
             </div>
             
         </div>

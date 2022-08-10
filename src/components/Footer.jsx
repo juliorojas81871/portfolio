@@ -8,7 +8,7 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='socialMedia'>  
-                <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank"><LinkedInIcon /></a>
+                <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
                 <a onClick={() =>  navigator.clipboard.writeText('juliorojas81871@gmail.com')}>
                     <EmailIcon />
                 </a>
