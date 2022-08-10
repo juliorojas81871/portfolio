@@ -15,7 +15,7 @@ function Footer() {
                 
             </div>
 
-            <p> &copy; { currentYear } add website url here</p>
+            <p> &copy; { currentYear } https://juliorojas81871.github.io/</p>
         </div>
     );
 }
