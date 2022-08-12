@@ -78,3 +78,30 @@
       font-size: 30px;
     }
   }
+
+  .tooltip-container {
+    position: relative !important;
+  }
+
+  .tooltip-container__tooltip {
+    position: absolute;
+    font-size: .5em;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #21325e;
+    color: #e9d35b;
+    padding: 1rem 2rem;
+    
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out all;
+  }
+
+  .tooltip-container__tooltip_active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* box-shadow: 0px 2px 15px #00000078; */

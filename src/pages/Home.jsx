@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import "../styles/Home.css"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import EmailIcon from "@material-ui/icons/Email"
 import GithubIcon from "@material-ui/icons/GitHub"
 
 function Home() {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const timeout = useRef({timeout: null}).current;
+
+  const onClick = useCallback(() => {
+    navigator.clipboard.writeText('juliorojas81871@gmail.com');
+    if(timeout.timeout) {
+      clearTimeout(timeout.timeout);
+    }
+    setShowTooltip(true)
+    timeout.timeout = setTimeout(() => {
+      setShowTooltip(false);
+    }, 5000);
+  }, [])
+
   return (
     <div className='home'>
       <div className='about'>
@@ -12,8 +26,11 @@ function Home() {
         <div className='prompt'> 
           <p>I am a software developer that love to learn and create</p>
           <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-          <a onClick={() =>  navigator.clipboard.writeText('juliorojas81871@gmail.com')}>
-                    <EmailIcon />
+          <a className='tooltip-container' onClick={onClick}>
+            <EmailIcon />
+            <div className={`tooltip-container__tooltip ${showTooltip ? "tooltip-container__tooltip_active" : ""}`}>
+              Email Copied
+            </div>
           </a>
           <a href="https://github.com/juliorojas81871" target="_blank" rel="noreferrer"><GithubIcon /></a>
         </div>

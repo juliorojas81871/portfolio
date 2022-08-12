@@ -26,3 +26,27 @@
       font-size: 50px;
     }
   }
+
+  .tooltip-containerf {
+    position: relative !important;
+  }
+
+  .tooltip-container__tooltipf {
+    position: absolute;
+    font-size: .77em;
+    bottom: 6.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #21325e;
+    color: #e9d35b;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out all;
+  }
+
+  .tooltip-container__tooltip_activef {
+    opacity: 1;
+    pointer-events: all;
+  }
