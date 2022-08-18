@@ -5,7 +5,7 @@ import EmailIcon from "@material-ui/icons/Email"
 
 function Footer() {
     const currentYear = new Date().getFullYear()
-    // 
+    
     const [showTooltip, setShowTooltip] = useState(false);
     const timeout = useRef({timeout: null}).current;
 
@@ -25,14 +25,14 @@ function Footer() {
             <div className='socialMedia'>  
                 <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
                 <a className='tooltip-containerf' onClick={onClick}>
-                    <EmailIcon />
+                    <EmailIcon sx={{ "&:hover": { color: "red" } }}/>
                     <div className={`tooltip-container__tooltipf ${showTooltip ? "tooltip-container__tooltip_activef" : ""}`}>
                         Email Copied
                     </div>
                 </a>   
             </div>
 
-            <p> &copy; { currentYear } https://juliorojas81871.github.io/portfolio/</p>
+            <p> &copy; { currentYear } Julio C Rojas</p>
         </div>
     );
 }

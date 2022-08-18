@@ -47,7 +47,7 @@ function Home() {
           <li className='item'>
             <h2>Back-End</h2>
             <span>
-              NodeJS, Java Spring, MySQL, MongoDB, DynamoDB
+              NodeJS, Express, Java Database Connectivity, Spring Boot, MySQL, MongoDB, DynamoDB
             </span>
           </li>
           <li className='item'>
