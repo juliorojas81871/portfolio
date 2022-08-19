@@ -1,5 +1,6 @@
 import ToDo from '../assets/to-do.jpg'
 import Notes from '../assets/notes.jpg'
+import Secrets from '../assets/secrets.jpg'
 
 export const ProjectList = [
     {
@@ -15,5 +16,12 @@ export const ProjectList = [
         skills: "React,Material-UI,JavaScript,HTML,CSS,Node.js,MongoDB,Mongoose,Express",
         urlCode: "https://github.com/juliorojas81871/Notes",
         urlLive: "https://keeper--notes--app.herokuapp.com/"
+    },
+    {
+        name: "Secrets",
+        image: Secrets,
+        skills: "EJS,Node.JS,Passport,Google Outh 2.0,MongoDB,HTML,CSS,JavaScript",
+        urlCode: "https://github.com/juliorojas81871/secrets",
+        urlLive: "https://secrets--app.herokuapp.com/"
     }
 ]
