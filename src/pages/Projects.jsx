@@ -5,16 +5,17 @@ import { ProjectList } from '../helpers/ProjectList'
 
 function Projects() {
   return (
-    <div className='project'>
+    <div className='projects'>
       <h1>My Personal Projects</h1>
       <div className='projectList'>
-        {ProjectList.map((props, index) => {
-          return <ProjectItem 
-            id={index} 
-            key = {index} 
-            name = {props.name} 
-            image = {props.image} 
-          />
+        {ProjectList.map((props, idx) => {
+          return ( <ProjectItem 
+              id={idx} 
+              key = {idx} 
+              name = {props.name} 
+              image = {props.image} 
+            />
+          )
         })}
       </div>
     </div>
