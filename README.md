@@ -2,6 +2,9 @@
 This code is a portfolio that use React and material-ui
 If anyone want see this code, [please click at this link](https://juliorojas81871.github.io/portfolio/).
 
+# Tools:
+React, JavaScript, Material-UI, HTML, CSS
+
 # Steps to get code to run:
 1. Open terminal
 2. Type (You can also download the code):
@@ -13,7 +16,7 @@ git clone https://github.com/juliorojas81871/portfolio
 
 4. Type: 
 ```
-npm install
+npm install --legacy-peer-deps
 ```
 5. Type: 
 ```

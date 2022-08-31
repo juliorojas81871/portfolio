@@ -7,7 +7,7 @@
   
   .about {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(75vh - 75px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 80px;
     color: #e9d35b;
-    height: 50px;
+    height: 10px;
   }
 
   .about .prompt {
@@ -89,7 +89,6 @@
     top: 1em;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #21325e;
     color: #e9d35b;
     padding: 1rem 2rem;
     
@@ -104,4 +103,3 @@
     pointer-events: all;
   }
 
-  /* box-shadow: 0px 2px 15px #00000078; */

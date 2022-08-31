@@ -33,8 +33,8 @@
 
   .tooltip-container__tooltipf {
     position: absolute;
-    font-size: .77em;
-    bottom: 6.6em;
+    font-size: .8em;
+    bottom: 7vh;
     left: 50%;
     transform: translateX(-50%);
     color: #e9d35b;

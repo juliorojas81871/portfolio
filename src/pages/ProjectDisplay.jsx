@@ -11,15 +11,16 @@ function ProjectDisplay() {
     //allow the program to go to the file
     const project = ProjectList[id]
     return (
-        <div className='project'>
+        <div className="project">
             <h1>{project.name}</h1>
             <img src={project.image} />
-            <p><b>Skills: </b>{project.skills}</p>
+            <p>
+                <b>Skills:</b> {project.skills}
+            </p>
             <div>
                 <a href={project.urlCode} target="_blank" rel="noreferrer"><GithubIcon /></a>
                 <a href={project.urlLive} target="_blank" rel="noreferrer"><PlayArrowIcon /> </a>            
             </div>
-            
         </div>
     )
 }

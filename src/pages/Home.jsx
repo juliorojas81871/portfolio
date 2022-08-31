@@ -22,7 +22,8 @@ function Home() {
   return (
     <div className='home'>
       <div className='about'>
-        <h2>Hello, My Name is Julio Rojas</h2>
+        <h2>Hello, My Name is</h2>
+        <h2><em>Julio Rojas</em></h2>
         <div className='prompt'> 
           <p>I am a software developer that love to learn and create</p>
           <a href="https://www.linkedin.com/in/juliocesarrojasjr/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
