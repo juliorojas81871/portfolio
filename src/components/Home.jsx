@@ -12,9 +12,6 @@ const Home = () => {
           <h2 className='text-4xl sm:text-7xl font-bold text-white'>
               Hello, I'm <span className='text-cyan-500'>Julio Rojas</span>
           </h2>
-          <h2 className='text-3xl sm:text-7xl font-bold text-white'>
-            A Front-End Developer
-          </h2>
           <p className='text-gray-300 py-4 max-w-lg text-center text-2xl sm:test-3xl'>
               I'm a front-end web developer specializing in building exceptional digital experiences.
               Currently, I'm focused on building responsive front-end web applications while learning back-end technologies.
