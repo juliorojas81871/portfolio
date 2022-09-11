@@ -1,9 +1,9 @@
 # Description:
-This code is a portfolio that use React and material-ui
+This code is my portfolio that use React and material-ui
 If anyone want see this code, [please click at this link](https://juliorojas81871.github.io/portfolio/).
 
 # Tools:
-React, JavaScript, Material-UI, HTML, CSS
+React, JavaScript, HTML, Tailwind, React Icons
 
 # Steps to get code to run:
 1. Open terminal
