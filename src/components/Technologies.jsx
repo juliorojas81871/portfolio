@@ -5,7 +5,7 @@ const Technologies = () => {
   return (
     <div
     name='technologies'
-    className='min-h-screen flex items-center min-h-screen flex items-center bg-gradient-to-b from-black to-gray-800 w-full'
+    className='min-h-screen flex items-center bg-gradient-to-b from-black to-gray-800 w-full'
     >
         <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
             <div>
