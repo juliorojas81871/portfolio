@@ -1,6 +1,14 @@
-import { NavBar, Home, SocialLinks, TimeLine, Projects, Technologies, Contact } from './components/index';
+import {
+  NavBar,
+  Home,
+  SocialLinks,
+  TimeLine,
+  Projects,
+  Technologies,
+  Contact,
+} from "./components/index";
 function App() {
-  console.log(process.env.REACT_APP_GET_FORM)
+  console.log(process.env.REACT_APP_GET_FORM);
 
   return (
     <div>
@@ -9,7 +17,7 @@ function App() {
       <Projects />
       <Technologies />
       <TimeLine />
-      <Contact/>
+      <Contact />
 
       <SocialLinks />
     </div>
