@@ -26,10 +26,10 @@ const Projects = () => {
                 />
               </a>
               <div className='flex items-center justify-center'>
-                <a href={urlLive} target='_blank' rel='noreferrer' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                <a href={urlLive} target='_blank' rel='noreferrer' className='w-1/2 px-6 py-3 m-5 duration-200 hover:scale-105'>
                   Demo
                 </a>
-                <a href={urlCode} target='_blank' rel='noreferrer' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                <a href={urlCode} target='_blank' rel='noreferrer' className='w-1/2 px-6 py-3 m-5 duration-200 hover:scale-105'>
                   Code
                 </a>
               </div>
