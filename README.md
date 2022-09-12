@@ -1,5 +1,5 @@
 # Description:
-This code is my portfolio that use React and material-ui
+This code is my portfolio
 If anyone want see this code, [please click at this link](https://juliorojas81871.github.io/portfolio/).
 
 # Tools:
@@ -16,7 +16,7 @@ git clone https://github.com/juliorojas81871/portfolio
 
 4. Type: 
 ```
-npm install --legacy-peer-deps
+npm i
 ```
 5. Type: 
 ```

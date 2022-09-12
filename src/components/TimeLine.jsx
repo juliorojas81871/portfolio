@@ -18,17 +18,17 @@ const TimeLine = () => {
             TimeLine
           </p>
         </div>
-        <div>
+        <div className="webkit-box-shadow: ">
           <VerticalTimeline lineColor="rgb(6 182 212)">
             {timeline.map(
               ({ classNameV, date, icon, title, location, message, id }) => (
                 <VerticalTimelineElement
                   className={classNameV}
                   date={date}
-                  iconStyle={{ background: "rgb(59 130 246)", color: "#fff" }}
+                  iconStyle={{ background: "rgb(59 130 246)", color: "#fff"}}
                   contentStyle={{ background: "rgb(31 41 55)", color: "#fff" }}
                   contentArrowStyle={{
-                    borderRight: "7px solid  rgb(107 114 128)",
+                  borderRight: "7px solid  rgb(107 114 128)"
                   }}
                   icon={icon}
                   key={id}

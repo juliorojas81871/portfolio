@@ -4,7 +4,7 @@ import {
   YTClone,
   notes,
   secrets,
-  toDo,
+  cyberpunk,
   css,
   react,
   github,
@@ -44,25 +44,26 @@ export const projects = [
   },
   {
     id: 4,
+    name: "To-Do",
+    src: cyberpunk,
+    urlCode: "https://github.com/juliorojas81871/cyberpunk",
+    urlLive: "https://juliorojas81871.github.io/cyberpunk/",
+  },
+  {
+    id: 5,
     name: "Notes",
     src: notes,
     urlCode: "https://github.com/juliorojas81871/Notes",
     urlLive: "https://keeper--notes--app.herokuapp.com/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Secrets",
     src: secrets,
     urlCode: "https://github.com/juliorojas81871/secrets",
     urlLive: "https://secrets--app.herokuapp.com/",
-  },
-  {
-    id: 6,
-    name: "To-Do",
-    src: toDo,
-    urlCode: "https://github.com/juliorojas81871/To-Do",
-    urlLive: "https://to-do--list--app.herokuapp.com/",
-  },
+  }
+ 
 ];
 
 export const links = [

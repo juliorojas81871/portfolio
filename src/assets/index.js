@@ -2,7 +2,7 @@
 export { default as dashboard } from './projects/dashboard.jpg';
 export { default as notes } from './projects/notes.jpg';
 export { default as secrets } from './projects/secrets.jpg';
-export { default as toDo } from './projects/to-do.jpg';
+export { default as cyberpunk } from './projects/cyberpunk.jpg';
 export { default as tetris } from './projects/tetris.jpg';
 export { default as YTClone } from './projects/YTClone.jpg';
 
