@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.15b67246.css",
-    "main.js": "/portfolio/static/js/main.d136d026.js",
+    "main.js": "/portfolio/static/js/main.9a87b825.js",
     "static/media/YTClone.jpg": "/portfolio/static/media/YTClone.434ae61230cd6a261887.jpg",
     "static/media/notes.jpg": "/portfolio/static/media/notes.4c83f03bcbe6b16260a7.jpg",
+    "static/media/cyberpunk.jpg": "/portfolio/static/media/cyberpunk.df6f186269377141eb3d.jpg",
     "static/media/dashboard.jpg": "/portfolio/static/media/dashboard.7ac0ba329f03bde319b2.jpg",
     "static/media/mongodb.png": "/portfolio/static/media/mongodb.236141835b0f1b96cba7.png",
     "static/media/tetris.jpg": "/portfolio/static/media/tetris.189faaf8b3ae51b4cbe7.jpg",
-    "static/media/to-do.jpg": "/portfolio/static/media/to-do.99aae32dd34f39152866.jpg",
     "static/media/secrets.jpg": "/portfolio/static/media/secrets.103f1918adc37a39fef6.jpg",
     "static/media/react.png": "/portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/node.png": "/portfolio/static/media/node.952a9ea986dcfa5229ad.png",
@@ -18,10 +18,10 @@
     "static/media/javascript.png": "/portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/portfolio/index.html",
     "main.15b67246.css.map": "/portfolio/static/css/main.15b67246.css.map",
-    "main.d136d026.js.map": "/portfolio/static/js/main.d136d026.js.map"
+    "main.9a87b825.js.map": "/portfolio/static/js/main.9a87b825.js.map"
   },
   "entrypoints": [
     "static/css/main.15b67246.css",
-    "static/js/main.d136d026.js"
+    "static/js/main.9a87b825.js"
   ]
 }
