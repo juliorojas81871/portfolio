@@ -62,8 +62,7 @@ export const projects = [
     src: secrets,
     urlCode: "https://github.com/juliorojas81871/secrets",
     urlLive: "https://secrets--app.herokuapp.com/",
-  }
- 
+  },
 ];
 
 export const links = [
@@ -76,6 +75,7 @@ export const links = [
     ),
     href: "https://www.linkedin.com/in/juliocesarrojasjr/",
     style: "rounded-tr-md",
+    icon: <FaLinkedin size={30} />,
   },
   {
     id: 2,
@@ -85,6 +85,7 @@ export const links = [
       </>
     ),
     href: "https://github.com/juliorojas81871",
+    icon: <FaGithub size={30} />,
   },
   {
     id: 3,
@@ -94,6 +95,7 @@ export const links = [
       </>
     ),
     href: "mailto:juliorojas81871@gmail.com",
+    icon: <HiOutlineMail size={30} />,
   },
   {
     id: 4,
@@ -159,21 +161,6 @@ export const techs = [
   },
 ];
 
-export const contactLinks = [
-  {
-    id: 1,
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/juliocesarrojasjr/",
-    style: "shadow-blue-700",
-  },
-  {
-    id: 2,
-    name: "Github",
-    href: "https://github.com/juliorojas81871",
-    style: "shadow-gray-400",
-  },
-];
-
 export const timeline = [
   {
     id: 1,
@@ -212,6 +199,15 @@ export const timeline = [
   {
     id: 4,
     classNameV: "vertical-timeline-element--education",
+    date: "September 2021 - Octuber 2021",
+    icon: <AiFillStar />,
+    title: "HTML, CSS, and Javascript for Web Developers",
+    location: "Online",
+    message: [],
+  },
+  {
+    id: 5,
+    classNameV: "vertical-timeline-element--education",
     date: "Octuber 2021",
     icon: <AiFillStar />,
     title: "AWS Certified Cloud Practitioner",
@@ -219,7 +215,7 @@ export const timeline = [
     message: [],
   },
   {
-    id: 5,
+    id: 6,
     classNameV: "vertical-timeline-element--work",
     date: "May 2021 - Current",
     icon: <MdWork />,

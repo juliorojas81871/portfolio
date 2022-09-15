@@ -17,6 +17,7 @@ const TimeLine = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             TimeLine
           </p>
+          <p className="py-6">A timeline of all my experiences and education</p>
         </div>
         <div className="webkit-box-shadow: ">
           <VerticalTimeline lineColor="rgb(6 182 212)">
@@ -33,7 +34,6 @@ const TimeLine = () => {
                   icon={icon}
                   key={id}
                 >
-                  {console.log(message)}
                   <h3 className="vertical-timeline-element-title">{title}</h3>
                   <h4 className="vertical-timeline-element-subtitle">
                     {location}
