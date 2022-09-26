@@ -1,5 +1,5 @@
 export { default as NavBar } from './NavBar';
-export { default as Home } from './Home';
+export { default as Main } from './Main';
 export { default as SocialLinks } from './SocialLinks';
 export { default as TimeLine } from './TimeLine';
 export { default as Projects } from './Projects';

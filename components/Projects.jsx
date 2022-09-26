@@ -1,5 +1,5 @@
-import React from "react";
 import { projects } from "../utils/constants";
+import Image from 'next/image'
 
 const Projects = () => {
   return (
@@ -21,7 +21,9 @@ const Projects = () => {
               <a href={urlLive} target="_blank" rel="noreferrer">
                 <img
                   src={src}
-                  alt={name}
+                  alt={name} 
+                  width='1916'
+                  height='926'
                   className="rounded-md duration-200 hover:scale-105"
                 />
               </a>

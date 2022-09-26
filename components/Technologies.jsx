@@ -1,4 +1,3 @@
-import React from "react";
 import { techs } from "../utils/constants";
 
 const Technologies = () => {
@@ -16,10 +15,13 @@ const Technologies = () => {
         </div>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
+          {techs.map(({ id, src, title, color }) => (
             <div
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg shadow-orange-500 `}
+              style={{
+                boxShadow: `${color} 0px 0px 10px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.008) 0px 0.282052px 0.423078px -0.0705129px, rgba(0, 0, 0, 0.008) 0px 0.141026px 0.282052px -0.141026px`,
+              }}
             >
               <img src={src} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>

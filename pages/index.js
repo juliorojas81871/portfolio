@@ -1,19 +1,20 @@
 import {
   NavBar,
-  Home,
+  Main,
   SocialLinks,
   TimeLine,
   Projects,
   Technologies,
   Contact,
-} from "./components/index";
-function App() {
-  console.log(process.env.REACT_APP_GET_FORM);
+} from "../components/index";
+import "tailwindcss/tailwind.css";
 
+
+const Home = () => {
   return (
     <div>
       <NavBar />
-      <Home />
+      <Main />
       <Projects />
       <Technologies />
       <TimeLine />
@@ -22,6 +23,6 @@ function App() {
       <SocialLinks />
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
