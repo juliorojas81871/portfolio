@@ -28,24 +28,24 @@ export const projects = [
   },
   {
     id: 4,
-    name: "To-Do",
+    name: "Cyberpunk",
     src: "/assets/projects/cyberpunk.jpg",
     urlCode: "https://github.com/juliorojas81871/cyberpunk",
     urlLive: "https://juliorojas81871.github.io/cyberpunk/",
   },
   {
     id: 5,
-    name: "Notes",
-    src: "/assets/projects/notes.jpg",
-    urlCode: "https://github.com/juliorojas81871/Notes",
-    urlLive: "https://keeper--notes--app.herokuapp.com/",
+    name: "Snapchat",
+    src: "/assets/projects/snapchat.jpg",
+    urlCode: "https://github.com/juliorojas81871/snapchat-clone",
+    urlLive: "https://snapchat-clone-6c3c4.web.app/",
   },
   {
     id: 6,
-    name: "Secrets",
-    src: "/assets/projects/secrets.jpg",
-    urlCode: "https://github.com/juliorojas81871/secrets",
-    urlLive: "https://secrets--app.herokuapp.com/",
+    name: "Spotify",
+    src: "/assets/projects/spotify.jpg",
+    urlCode: "https://github.com/juliorojas81871/spotify-clone",
+    urlLive: "https://spotify-clone-jnkj.vercel.app/login",
   },
 ];
 
