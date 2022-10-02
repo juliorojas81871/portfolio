@@ -117,7 +117,7 @@ export const techs = [
     id: 4,
     src: "/assets/react.png",
     title: "React",
-    color: "rgb(37,99,235)",
+    color: "rgb(34,211,238)",
   },
   {
     id: 5,
@@ -142,6 +142,30 @@ export const techs = [
     src: "/assets/node.png",
     title: "Node",
     color: "rgb(16,185,129)",
+  },
+  {
+    id: 9,
+    src: "/assets/next.png",
+    title: "Next.js",
+    color: "rgb(250,250,250)",
+  },
+  {
+    id: 10,
+    src: "/assets/redux.png",
+    title: "Redux",
+    color: "rgb(168,85,247)",
+  },
+  {
+    id: 11,
+    src: "/assets/firebase.png",
+    title: "Firebase",
+    color: "rgb(251,191,36)",
+  },
+  {
+    id: 12,
+    src: "/assets/typescript.png",
+    title: "TypeScript",
+    color: "rgb(14,165,233)",
   },
 ];
 
@@ -201,7 +225,7 @@ export const timeline = [
   {
     id: 6,
     classNameV: "vertical-timeline-element--work",
-    date: "May 2021 - Current",
+    date: "May 2020 - Current",
     icon: <MdWork />,
     title: "Jr. Frontend Website Development - Shurable Inc",
     location: "Remote",
