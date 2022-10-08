@@ -28,10 +28,10 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Cyberpunk",
-    src: "/assets/projects/cyberpunk.jpg",
-    urlCode: "https://github.com/juliorojas81871/cyberpunk",
-    urlLive: "https://juliorojas81871.github.io/cyberpunk/",
+    name: "Reddit Clone",
+    src: "/assets/projects/reddit.jpg",
+    urlCode: "https://github.com/juliorojas81871/reddit-clone",
+    urlLive: "https://reddit-clone-lake-zeta.vercel.app/",
   },
   {
     id: 5,
