@@ -1,4 +1,5 @@
 import { techs } from "../utils/constants";
+import Image from "next/image";
 
 const Technologies = () => {
   return (
@@ -23,7 +24,7 @@ const Technologies = () => {
                 boxShadow: `${color} 0px 0px 10px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.008) 0px 0.282052px 0.423078px -0.0705129px, rgba(0, 0, 0, 0.008) 0px 0.141026px 0.282052px -0.141026px`,
               }}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
+              <Image src={src} alt="" height={80} width={80} objectFit="contain"  />
               <p className="mt-4">{title}</p>
             </div>
           ))}

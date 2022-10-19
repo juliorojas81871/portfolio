@@ -7,10 +7,10 @@ import { MdWork, MdSchool } from "react-icons/md";
 export const projects = [
   {
     id: 1,
-    name: "Dashboard",
-    src: "/assets/projects/dashboard.jpg",
-    urlCode: "https://github.com/juliorojas81871/dashboard ",
-    urlLive: "https://juliorojas81871.github.io/dashboard/",
+    name: "Amazon Clone",
+    src: "/assets/projects/amazon.jpg",
+    urlCode: "https://github.com/juliorojas81871/amazon-clone ",
+    urlLive: "https://amazon-clone-bay-sigma.vercel.app/",
   },
   {
     id: 2,
@@ -35,17 +35,17 @@ export const projects = [
   },
   {
     id: 5,
-    name: "Snapchat",
-    src: "/assets/projects/snapchat.jpg",
-    urlCode: "https://github.com/juliorojas81871/snapchat-clone",
-    urlLive: "https://snapchat-clone-6c3c4.web.app/",
-  },
-  {
-    id: 6,
-    name: "Spotify",
+    name: "Spotify Clone",
     src: "/assets/projects/spotify.jpg",
     urlCode: "https://github.com/juliorojas81871/spotify-clone",
     urlLive: "https://spotify-clone-jnkj.vercel.app/login",
+  },
+  {
+    id: 6,
+    name: "Dashboard",
+    src: "/assets/projects/dashboard.jpg",
+    urlCode: "https://github.com/juliorojas81871/dashboard ",
+    urlLive: "https://juliorojas81871.github.io/dashboard/",
   },
 ];
 

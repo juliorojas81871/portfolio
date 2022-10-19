@@ -1,5 +1,4 @@
 import { projects } from "../utils/constants";
-import Image from 'next/image'
 
 const Projects = () => {
   return (
