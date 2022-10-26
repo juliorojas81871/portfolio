@@ -15,7 +15,7 @@ const Home = () => {
     <div>
       <Head>
         <title>JR Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="assets/icon.jpg" />
       </Head>
       <NavBar />
       <Main />

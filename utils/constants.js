@@ -14,10 +14,10 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Tetris",
-    src: "/assets/projects/tetris.jpg",
-    urlCode: "https://github.com/juliorojas81871/tetris ",
-    urlLive: "https://juliorojas81871.github.io/tetris/",
+    name: "LinkedIn Clone",
+    src: "/assets/projects/linkedin.jpg",
+    urlCode: "https://github.com/juliorojas81871/linkedIn-clone ",
+    urlLive: "https://linkedinclone-seven.vercel.app/home",
   },
   {
     id: 3,
@@ -42,10 +42,10 @@ export const projects = [
   },
   {
     id: 6,
-    name: "Dashboard",
-    src: "/assets/projects/dashboard.jpg",
-    urlCode: "https://github.com/juliorojas81871/dashboard ",
-    urlLive: "https://juliorojas81871.github.io/dashboard/",
+    name: "Tetris",
+    src: "/assets/projects/tetris.jpg",
+    urlCode: "https://github.com/juliorojas81871/tetris ",
+    urlLive: "https://juliorojas81871.github.io/tetris/",
   },
 ];
 
@@ -235,6 +235,7 @@ export const timeline = [
       `Customize Material UI to follow brand styling guidelines`,
       `Follow tight deadlines and track progress using issue tracking systems`,
       `Debug, document, and fix client-facing bugs.`,
+      `Pull data from MongoDB to be used at the frontend.`,
     ],
   },
 ];
