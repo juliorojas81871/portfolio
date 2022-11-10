@@ -14,38 +14,38 @@ export const projects = [
   },
   {
     id: 2,
+    name: "Netflix Clone",
+    src: "/assets/projects/netflix.jpg",
+    urlCode: "https://github.com/juliorojas81871/netflix-clone ",
+    urlLive: "https://netflix-clone-nine-nu.vercel.app/",
+  },
+  {
+    id: 3,
     name: "LinkedIn Clone",
     src: "/assets/projects/linkedin.jpg",
     urlCode: "https://github.com/juliorojas81871/linkedIn-clone ",
     urlLive: "https://linkedinclone-seven.vercel.app/home",
   },
   {
-    id: 3,
+    id: 4,
     name: "YouTube Clone",
     src: "/assets/projects/YTClone.jpg",
     urlCode: "https://github.com/juliorojas81871/youtube-clone ",
     urlLive: "https://juliorojas81871.github.io/youtube-clone/",
   },
   {
-    id: 4,
+    id: 5,
     name: "Reddit Clone",
     src: "/assets/projects/reddit.jpg",
     urlCode: "https://github.com/juliorojas81871/reddit-clone",
     urlLive: "https://reddit-clone-lake-zeta.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Spotify Clone",
     src: "/assets/projects/spotify.jpg",
     urlCode: "https://github.com/juliorojas81871/spotify-clone",
     urlLive: "https://spotify-clone-jnkj.vercel.app/login",
-  },
-  {
-    id: 6,
-    name: "Tetris",
-    src: "/assets/projects/tetris.jpg",
-    urlCode: "https://github.com/juliorojas81871/tetris ",
-    urlLive: "https://juliorojas81871.github.io/tetris/",
   },
 ];
 
