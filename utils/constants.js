@@ -35,17 +35,17 @@ export const projects = [
   },
   {
     id: 5,
+    name: "Spotify Clone",
+    src: "/assets/projects/spotify.jpg",
+    urlCode: "https://github.com/juliorojas81871/spotify-clone",
+    urlLive: "https://spotify-clone-jnkj.vercel.app",
+  },
+  {
+    id: 6,
     name: "Reddit Clone",
     src: "/assets/projects/reddit.jpg",
     urlCode: "https://github.com/juliorojas81871/reddit-clone",
     urlLive: "https://reddit-clone-lake-zeta.vercel.app/",
-  },
-  {
-    id: 6,
-    name: "Spotify Clone",
-    src: "/assets/projects/spotify.jpg",
-    urlCode: "https://github.com/juliorojas81871/spotify-clone",
-    urlLive: "https://spotify-clone-jnkj.vercel.app/login",
   },
 ];
 
@@ -111,7 +111,7 @@ export const techs = [
     id: 3,
     src: "/assets/javascript.png",
     title: "JavaScript",
-    color: "rgb(234,179,8)"
+    color: "rgb(234,179,8)",
   },
   {
     id: 4,
