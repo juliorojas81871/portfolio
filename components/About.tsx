@@ -22,15 +22,15 @@ const About = (props: Props) => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src="/assets/example2.jpg"
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] object-cover"
+        className="-mb-32 sm:-mb-20 md:mb-0 flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] object-cover"
       />
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+      <div className="space-y-6 sm:space-y-10 px-0 md:px-10">
+        <h4 className="text-2xl sm:text-4xl font-semibold">
           Here is a{" "}
           <span className="decoration-[#F7AB0A]/50 underline">little</span>{" "}
           background
         </h4>
-        <p className="text-lg">
+        <p className="sm:text-lg">
           I'm a front-end web developer specializing in building exceptional
           digital experiences. Currently, I'm focused on building responsive
           front-end web applications while learning back-end technologies.
