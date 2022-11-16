@@ -1,6 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import Link from "next/link";
 
 interface Props {}
 

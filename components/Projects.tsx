@@ -34,7 +34,7 @@ const Projects = (props: Props) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 src="/assets/amazon.jpg"
-                className="object-contain cursor-pointer"
+                className="md:mb-0 flex-shrink-0 md:w-[500px] md:h-[300px] object-contain cursor-pointer"
               />
             </Link>
 
