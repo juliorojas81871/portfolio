@@ -36,7 +36,11 @@ const Header = (props: Props) => {
           fgColor="gray"
           bgColor="transparent"
         />
-        <BsFillPersonLinesFill className='ml-2 cursor-pointer ' style={{color:'gray'}} size={26} />
+        <BsFillPersonLinesFill
+          className="ml-2 cursor-pointer "
+          style={{ color: "gray" }}
+          size={26}
+        />
       </motion.div>
       <motion.div
         initial={{
@@ -52,11 +56,7 @@ const Header = (props: Props) => {
         transition={{ duration: 1 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
-        <SocialIcon
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
           Get In Touch
         </p>

@@ -5,7 +5,7 @@ interface Props {}
 
 const ExperienceEducationCard = (props: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[340px] h-[400px] sm:h-[590px] md:h-[650px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-hide">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[340px] max-h-[calc(100vh-260px)] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-hide">
       <motion.img
         initial={{
           y: -100,
@@ -40,7 +40,14 @@ const ExperienceEducationCard = (props: Props) => {
           <li>Summary points</li>
           <li>Summary points</li>
           <li>Summary points</li>
-          <li>Summary pointsSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary pointSummary point</li>
+          <li>
+            Summary pointsSummary pointSummary pointSummary pointSummary
+            pointSummary pointSummary pointSummary pointSummary pointSummary
+            pointSummary pointSummary pointSummary pointSummary pointSummary
+            pointSummary pointSummary pointSummary pointSummary pointSummary
+            pointSummary pointSummary pointSummary pointSummary pointSummary
+            pointSummary point
+          </li>
         </ul>
       </div>
     </article>
