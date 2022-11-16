@@ -32,30 +32,30 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-2 md:space-y-10">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">201-546-4543</p>
+            <PhoneIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
+            <p className="md:text-2xl">201-546-4543</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <a className="text-2xl" href={`mailto:juliorojas81871@gmail.com`}>
+            <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
+            <a className="md:text-2xl" href={`mailto:juliorojas81871@gmail.com`}>
               juliorojas81871@gmail.com
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Bergen County, New Jersey, United States</p>
+            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
+            <p className="md:text-2xl">Bergen County, New Jersey, United States</p>
           </div>
         </div>
         <form
-          className="hidden md:flex flex-col space-y-2  md:w-fit mx-auto"
+          className="flex flex-col space-y-2 md:w-fit mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex space-x-2">
@@ -86,7 +86,7 @@ const ContactMe = (props: Props) => {
 
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-[#F7AB0A] py-3 md:py-5 px-10 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>

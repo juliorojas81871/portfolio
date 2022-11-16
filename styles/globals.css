@@ -6,14 +6,16 @@
   html {
     @apply scroll-smooth;
   }
- 
 }
 
 @layer components {
+  .headerButton {
+    @apply border border-transparent rounded-full uppercase text-xs tracking-widest transition-all text-[#808080] hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+  }
   .heroButton {
-    @apply px-6 py-2 border border-[#242424]  rounded-full uppercase text-xs tracking-widest transition-all text-gray-500 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+    @apply px-6 py-2 border border-transparent rounded-full uppercase text-xs tracking-widest transition-all text-gray-500 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
   }
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all hover:border-[#F7AB0A]/40 focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40;
+    @apply outline-none bg-slate-400/10 rounded-sm border-b md:px-6 py-3 md:py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all hover:border-[#F7AB0A]/40 focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40;
   }
 }

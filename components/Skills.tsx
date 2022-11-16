@@ -27,6 +27,7 @@ const Skills = (props: Props) => {
         <Skill directionLeft />
         <Skill directionLeft />
       </div>
+      
     </motion.div>
   );
 };
