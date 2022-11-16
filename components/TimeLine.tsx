@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExperienceEducationCard } from "./";
+import { TimeLineCard } from "./";
 
 type Props = {};
 
@@ -16,9 +16,9 @@ const ExperienceEducation = (props: Props) => {
         TimeLine
       </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        <ExperienceEducationCard />
-        <ExperienceEducationCard />
-        <ExperienceEducationCard />
+        <TimeLineCard />
+        <TimeLineCard />
+        <TimeLineCard />
       </div>
     </motion.div>
   );

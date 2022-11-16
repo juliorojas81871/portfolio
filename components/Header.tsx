@@ -2,12 +2,14 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { BsFillPersonLinesFill, BsLinkedin, BsGithub } from "react-icons/bs";
 import { VscMail } from "react-icons/Vsc";
-
+import { Social } from "../typings";
 import Link from "next/link";
 
-interface Props {}
+interface Props {
+  socials: Social[];
+}
 
-const Header = (props: Props) => {
+const Header = ({ socials }: Props) => {
   return (
     <header className="sticky top-0 flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto">
       <motion.div

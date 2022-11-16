@@ -2,12 +2,16 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { BackgroundCircles } from "./";
 import Image from "next/image";
 import Link from "next/link";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const Hero = (props: Props) => {
+const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
-    words: [`Hi, I'm Julio Rojas`, "A Web Developer"],
+    words: [`Hi, I'm ${pageInfo?.name}`, "A Web Developer"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -18,12 +22,12 @@ const Hero = (props: Props) => {
         className="relative rounded-full mx-auto object-cover"
         width={128}
         height={128}
-        src="/assets/example.jpg"
+        src={urlFor(pageInfo?.heroImage).url()}
         alt=""
       />
       <div className="z-20 relative">
         <h2 className="tracking-[15px] text-sm uppercase text-gray-500 pb-2">
-          a software engineer
+          {pageInfo?.role}
         </h2>
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>

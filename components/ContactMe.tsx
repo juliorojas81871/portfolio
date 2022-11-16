@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from "../typings";
 
-interface Props {}
+interface Props {
+  pageInfo: PageInfo;
+}
 
 type Inputs = {
   name: string;
@@ -11,15 +14,14 @@ type Inputs = {
   message: string;
 };
 
-const ContactMe = (props: Props) => {
+const ContactMe = ({ pageInfo }: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    window.location.href = `mailto:juliorojas81871@gmail.com?subject=${data.subject}&body=${data.message}`;
+    window.location.href = `mailto:${pageInfo.email}?subject=${data.subject}&body=${data.message}`;
   };
   return (
     <motion.div
@@ -41,17 +43,17 @@ const ContactMe = (props: Props) => {
         <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="md:text-2xl">201-546-4543</p>
+            <p className="md:text-2xl">{pageInfo.phoneNumber}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
-            <a className="md:text-2xl" href={`mailto:juliorojas81871@gmail.com`}>
-              juliorojas81871@gmail.com
+            <a className="md:text-2xl" href={`mailto:${pageInfo.email}`}>
+              {pageInfo.email}
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
-            <p className="md:text-2xl">Bergen County, New Jersey, United States</p>
+            <p className="md:text-2xl">{pageInfo.address}</p>
           </div>
         </div>
         <form

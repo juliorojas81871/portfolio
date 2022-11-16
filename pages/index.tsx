@@ -1,39 +1,49 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import {
   Header,
   Hero,
   About,
-  ExperienceEducation,
+  TimeLine,
   Skills,
   Projects,
   ContactMe,
 } from "../components";
 import Link from "next/link";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { PageInfo, Skill, Social } from "../typings";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchSkills } from "../utils/fetchSkills";
+import { fetchSocial } from "../utils/fetchSocials";
+import { GetStaticProps } from "next";
 
-const Home: NextPage = () => {
+type Props = {
+  pageInfo: PageInfo;
+  skills: Skill[];
+  socials: Social[];
+};
+
+const Home = ({ skills, pageInfo, socials }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
       <Head>
         <title>JR Portfolio</title>
         <link rel="icon" href="/icon.jpg" />
       </Head>
-      <Header />
+      <Header socials={socials} />
 
       {/* hero */}
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* about */}
       <section id="about" className="snap-start">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Experience / Education */}
       <section id="timeline" className="snap-start">
-        <ExperienceEducation />
+        <TimeLine />
       </section>
 
       {/* skill */}
@@ -48,7 +58,7 @@ const Home: NextPage = () => {
 
       {/* contact me */}
       <section id="contact" className="snap-start">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo}/>
       </section>
 
       <Link href="#hero">
@@ -63,3 +73,21 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const skills: Skill[] = await fetchSkills();
+  const socials: Social[] = await fetchSocial();
+
+  return {
+    props: {
+      pageInfo,
+      skills,
+      socials,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 10,
+  };
+};

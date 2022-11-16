@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-interface Props {}
+interface Props {
+  pageInfo: PageInfo;
+}
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -21,7 +25,7 @@ const About = (props: Props) => {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src="/assets/example2.jpg"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-32 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] object-cover"
       />
       <div className="space-y-4 md:space-y-10 px-0 md:px-10">
@@ -30,11 +34,7 @@ const About = (props: Props) => {
           <span className="decoration-[#F7AB0A]/50 underline">little</span>{" "}
           background
         </h4>
-        <p className="sm:text-lg">
-          I'm a front-end web developer specializing in building exceptional
-          digital experiences. Currently, I'm focused on building responsive
-          front-end web applications while learning back-end technologies.
-        </p>
+        <p className="sm:text-lg">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
