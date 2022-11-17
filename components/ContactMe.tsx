@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { PageInfo } from "../typings";
 
 interface Props {

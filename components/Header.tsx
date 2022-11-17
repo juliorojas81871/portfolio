@@ -1,7 +1,6 @@
-import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { BsFillPersonLinesFill, BsLinkedin, BsGithub } from "react-icons/bs";
-import { VscMail } from "react-icons/Vsc";
+import { VscMail } from "react-icons/vsc";
 import { Social } from "../typings";
 import Link from "next/link";
 
