@@ -12,7 +12,7 @@ const query = groq`
 `;
 
 type Data = {
-    timeline: Timeline[];
+  timeline: Timeline[];
 };
 
 export default async function handler(

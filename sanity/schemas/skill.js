@@ -28,7 +28,7 @@ export default {
       name: "order",
       title: "Order",
       type: "number",
-    }
+    },
   ],
   orderings: [
     {

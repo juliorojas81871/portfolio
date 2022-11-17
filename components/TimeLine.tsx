@@ -6,7 +6,7 @@ type Props = {
   timelines: Timeline[];
 };
 
-const ExperienceEducation = ({timelines}: Props) => {
+const ExperienceEducation = ({ timelines }: Props) => {
   return (
     <motion.div
       className="flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 h-screen justify-evenly mx-auto items-center"
@@ -19,10 +19,9 @@ const ExperienceEducation = ({timelines}: Props) => {
         TimeLine
       </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-      {timelines?.map((timeline) => (
+        {timelines?.map((timeline) => (
           <TimeLineCard key={timeline._id} timeline={timeline} />
         ))}
-
       </div>
     </motion.div>
   );

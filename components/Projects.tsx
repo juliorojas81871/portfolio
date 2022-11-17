@@ -49,15 +49,15 @@ const Projects = ({ projects }: Props) => {
                 {project.title}
               </h4>
               <div className="flex space-x-2 my-2">
-              {project.technologies.map((technology) => (
-                <Image
-                  className="rounded-full"
-                  src={urlFor(technology.image).url()}
-                  width={40}
-                  height={40}
-                  alt=""
-                />
-              ))}
+                {project.technologies.map((technology) => (
+                  <Image
+                    className="rounded-full"
+                    src={urlFor(technology.image).url()}
+                    width={40}
+                    height={40}
+                    alt=""
+                  />
+                ))}
               </div>
               <p className="md:text-lg text-center md:text-left">
                 {project.summary}

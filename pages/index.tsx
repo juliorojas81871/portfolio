@@ -24,7 +24,6 @@ type Props = {
   socials: Social[];
   projects: Project[];
   timelines: Timeline[];
-
 };
 
 const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
@@ -48,7 +47,7 @@ const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
 
       {/* Experience / Education */}
       <section id="timeline" className="snap-start">
-        <TimeLine timelines={timelines}/>
+        <TimeLine timelines={timelines} />
       </section>
 
       {/* skill */}
@@ -63,7 +62,7 @@ const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
 
       {/* contact me */}
       <section id="contact" className="snap-start">
-        <ContactMe pageInfo={pageInfo}/>
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       <Link href="#hero">

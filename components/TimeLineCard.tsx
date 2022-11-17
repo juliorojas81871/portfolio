@@ -46,11 +46,30 @@ const ExperienceEducationCard = ({ timeline }: Props) => {
             ? "Present"
             : new Date(timeline.dateEnded).toDateString()}
         </p>
-        <ul className="list-disc space-y-4 ml-5 sm:text-lg">
-          {timeline.points.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
-        </ul>
+
+        {timeline.imagePoint ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-center"
+          >
+            <Image
+              src={urlFor(timeline.imagePoint).url()}
+              width={200}
+              height={200}
+              alt=""
+              className="md:mb-0 flex-shrink-0 md:w-[400px] md:h-[250px] object-contain"
+            />
+          </motion.div>
+        ) : (
+          <ul className="list-disc space-y-4 ml-5 sm:text-lg">
+            {timeline.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </article>
   );

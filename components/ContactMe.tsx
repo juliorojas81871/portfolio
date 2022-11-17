@@ -8,7 +8,6 @@ interface Props {
 }
 
 const ContactMe = ({ pageInfo }: Props) => {
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,7 +28,9 @@ const ContactMe = ({ pageInfo }: Props) => {
         <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
-            <a className="md:text-2xl" href={`callto:${pageInfo.phoneNumber}`}>{pageInfo.phoneNumber}</a>
+            <a className="md:text-2xl" href={`callto:${pageInfo.phoneNumber}`}>
+              {pageInfo.phoneNumber}
+            </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
@@ -44,8 +45,9 @@ const ContactMe = ({ pageInfo }: Props) => {
         </div>
         <form
           className="flex flex-col space-y-2 md:w-fit mx-auto"
-          action={process.env.NEXT_PUBLIC_GETFORM} method="POST">
-        
+          action={process.env.NEXT_PUBLIC_GETFORM}
+          method="POST"
+        >
           <div className="flex space-x-2">
             <input
               className="contactInput"

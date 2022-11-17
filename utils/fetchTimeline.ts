@@ -8,6 +8,5 @@ export const fetchTimeline = async () => {
   const data = await res.json();
   const timeline: Timeline[] = data.timeline;
 
-
   return timeline;
 };

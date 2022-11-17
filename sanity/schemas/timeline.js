@@ -48,5 +48,13 @@ export default {
       type: "array",
       of: [{ type: "string" }],
     },
+    {
+      name: "imagePoint",
+      title: "ImagePoint",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 };

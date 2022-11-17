@@ -66,7 +66,11 @@ const Header = ({ socials }: Props) => {
         >
           <BsGithub size={25} />
         </a>
-        <a className="headerButton p-1.5" download={true} >
+        <a
+          className="headerButton p-1.5"
+          download={true}
+          href="/assets/Julio Rojas - Resume.pdf"
+        >
           <BsFillPersonLinesFill size={26} />
         </a>
       </motion.div>
