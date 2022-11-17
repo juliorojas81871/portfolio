@@ -41,10 +41,17 @@ const ExperienceEducationCard = ({ timeline }: Props) => {
             ))}
         </div>
         <p className="uppercase py-5 text-gray-300">
-          {new Date(timeline.dateStarted).toDateString()} -{" "}
+          {new Date(timeline.dateStarted).toLocaleDateString(undefined, {
+            month: "long",
+            year: "numeric",
+          })}{" "}
+          -{" "}
           {timeline.isCurrentlyWorkingHere
             ? "Present"
-            : new Date(timeline.dateEnded).toDateString()}
+            : new Date(timeline.dateEnded).toLocaleDateString(undefined, {
+                month: "long",
+                year: "numeric",
+              })}
         </p>
 
         {timeline.imagePoint ? (

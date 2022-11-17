@@ -1,3 +1,5 @@
+import BS from "react-icons/bs";
+
 interface SanityBody {
   _createdAt: string;
   _id: string;
@@ -69,4 +71,6 @@ export interface Social extends SanityBody {
   url: string;
   pdf: file;
   size: number;
+  icon: keyof typeof BS;
+  downloadUrl: string;
 }

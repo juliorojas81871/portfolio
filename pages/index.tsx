@@ -17,6 +17,7 @@ import { fetchSocial } from "../utils/fetchSocials";
 import { GetStaticProps } from "next";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchTimeline } from "../utils/fetchTimeline";
+import { sanityClient } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
@@ -79,11 +80,29 @@ const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const skills: Skill[] = await fetchSkills();
-  const socials: Social[] = await fetchSocial();
-  const projects: Project[] = await fetchProjects();
-  const timelines: Timeline[] = await fetchTimeline();
+  // const pageInfo: PageInfo = await fetchPageInfo();
+  // const skills: Skill[] = await fetchSkills();
+  // const socials: Social[] = await fetchSocial();
+  // const projects: Project[] = await fetchProjects();
+  // const timelines: Timeline[] = await fetchTimeline();
+
+  const { pageInfo, skills, socials, projects, timelines } =
+    await sanityClient.fetch(`{
+    "pageInfo": *[_type == "pageInfo"][0],
+    "skills": *[_type == "skill"] | order(order asc),
+    "socials": *[_type == "social"] {
+      ...,
+      "downloadUrl": pdf.asset->url
+    },
+    "projects": *[_type == "project"] {
+      ...,
+      technologies[]->
+    },
+    "timelines": *[_type == "timeline"] {
+      ...,
+      technologies[]->
+    }
+  }`);
 
   return {
     props: {

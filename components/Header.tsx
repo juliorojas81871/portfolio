@@ -1,8 +1,23 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
-import { BsFillPersonLinesFill, BsLinkedin, BsGithub } from "react-icons/bs";
+import * as BS from "react-icons/bs";
 import { VscMail } from "react-icons/vsc";
 import { Social } from "../typings";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const DynamicIcon: React.FC<{
+  name?: keyof typeof BS;
+  className?: string;
+  size?: number;
+}> = ({ name, className, size }) => {
+  console.log("ICON NAME", name);
+  const Icon = BS[name || "BsQuestionCircle"] || BS.BsQuestionCircle;
+
+  console.log("Icon", Icon);
+
+  return <Icon size={size} className={className} />;
+};
 
 interface Props {
   socials: Social[];
@@ -27,7 +42,7 @@ const Header = ({ socials }: Props) => {
         transition={{ duration: 1.5 }}
       >
         {/* social icons */}
-        {/* {socials.map((social) =>
+        {socials.map((social) =>
           social.url ? (
             <a
               key={social._id}
@@ -36,42 +51,19 @@ const Header = ({ socials }: Props) => {
               rel="noreferrer"
               className="headerButton p-1.5"
             >
-              <>
-              {social.icon}
-              </>
+              <DynamicIcon name={social.icon} size={24} />
             </a>
           ) : (
-            <a className="headerButton p-1.5" href={social.pdf} download={true}>
-              <>
-              {social.icon}
-              </>
+            <a
+              className="headerButton p-1.5"
+              href={social.downloadUrl}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <DynamicIcon name={social.icon} size={24} />
             </a>
           )
-        )} */}
-        <a
-          href={socials[0].url}
-          target="_blank"
-          rel="noreferrer"
-          className="headerButton p-1.5"
-        >
-          <BsLinkedin size={24} />
-        </a>
-
-        <a
-          href={socials[1].url}
-          target="_blank"
-          rel="noreferrer"
-          className="headerButton p-1.5"
-        >
-          <BsGithub size={25} />
-        </a>
-        <a
-          className="headerButton p-1.5"
-          download={true}
-          href="/assets/Julio Rojas - Resume.pdf"
-        >
-          <BsFillPersonLinesFill size={26} />
-        </a>
+        )}
       </motion.div>
       <Link href="#contact">
         <motion.div
