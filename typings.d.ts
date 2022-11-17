@@ -27,12 +27,12 @@ interface SanityBody {
   
   export interface Timeline extends SanityBody {
     _type: "timeline";
-    company: string;
-    companyImage: Image;
+    location: string;
+    image: Image;
     dateStarted: date;
     dateEnded: date;
     isCurrentlyWorkingHere: boolean;
-    jobTitle: string;
+    title: string;
     points: string[];
     technologies: Technology[];
   }
@@ -49,7 +49,7 @@ interface SanityBody {
     image: Image;
     progress: number;
     title: string;
-    icon: string;
+    icon: text;
     pdf: file;
   }
   

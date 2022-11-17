@@ -10,19 +10,24 @@ import {
 } from "../components";
 import Link from "next/link";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { PageInfo, Skill, Social } from "../typings";
+import { PageInfo, Skill, Social, Project, Timeline } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocial } from "../utils/fetchSocials";
 import { GetStaticProps } from "next";
+import { fetchProjects } from "../utils/fetchProjects";
+import { fetchTimeline } from "../utils/fetchTimeline";
 
 type Props = {
   pageInfo: PageInfo;
   skills: Skill[];
   socials: Social[];
+  projects: Project[];
+  timelines: Timeline[];
+
 };
 
-const Home = ({ skills, pageInfo, socials }: Props) => {
+const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
       <Head>
@@ -43,7 +48,7 @@ const Home = ({ skills, pageInfo, socials }: Props) => {
 
       {/* Experience / Education */}
       <section id="timeline" className="snap-start">
-        <TimeLine />
+        <TimeLine timelines={timelines}/>
       </section>
 
       {/* skill */}
@@ -53,7 +58,7 @@ const Home = ({ skills, pageInfo, socials }: Props) => {
 
       {/* projects */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* contact me */}
@@ -78,12 +83,16 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const skills: Skill[] = await fetchSkills();
   const socials: Social[] = await fetchSocial();
+  const projects: Project[] = await fetchProjects();
+  const timelines: Timeline[] = await fetchTimeline();
 
   return {
     props: {
       pageInfo,
       skills,
       socials,
+      projects,
+      timelines,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

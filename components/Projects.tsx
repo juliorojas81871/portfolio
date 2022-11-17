@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-const Projects = (props: Props) => {
-  const projects = [1, 2, 3, 4, 5];
+const Projects = ({ projects }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,11 +22,11 @@ const Projects = (props: Props) => {
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, i) => (
           <motion.div
-            key={project}
+            key={project._id}
             className="w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-20 md:p-44 h-screen"
           >
             <Link
-              key={project}
+              key={project._id}
               href="https://github.com/juliorojas81871/amazon-clone"
             >
               <motion.img
@@ -33,7 +36,7 @@ const Projects = (props: Props) => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                src="/assets/amazon.jpg"
+                src={urlFor(project?.image).url()}
                 className="md:mb-0 flex-shrink-0 md:w-[500px] md:h-[300px] object-contain cursor-pointer"
               />
             </Link>
@@ -43,19 +46,21 @@ const Projects = (props: Props) => {
                 <span className="decoration-[#F7AB0A]/50 underline">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                Amazon Clone
+                {project.title}
               </h4>
-              <Image
-                className="rounded-full"
-                src="/assets/next.png"
-                width={40}
-                height={40}
-                alt=""
-              />
+              <div className="flex space-x-2 my-2">
+              {project.technologies.map((technology) => (
+                <Image
+                  className="rounded-full"
+                  src={urlFor(technology.image).url()}
+                  width={40}
+                  height={40}
+                  alt=""
+                />
+              ))}
+              </div>
               <p className="md:text-lg text-center md:text-left">
-                This code is an amazon clone where you can buy items and see
-                your past orders. The program will also save items in your cart
-                until you place an order.
+                {project.summary}
               </p>
             </div>
           </motion.div>

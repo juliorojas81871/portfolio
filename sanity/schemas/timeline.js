@@ -9,7 +9,7 @@ export default {
       type: "string",
     },
     {
-      name: "Image",
+      name: "image",
       title: "Image",
       type: "image",
       options: {
@@ -17,8 +17,8 @@ export default {
       },
     },
     {
-      name: "company",
-      title: "Company",
+      name: "location",
+      title: "Location",
       type: "text",
     },
     {

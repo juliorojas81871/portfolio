@@ -9,7 +9,7 @@ interface Props {
   socials: Social[];
 }
 const Header = ({ socials }: Props) => {
-  console.log(socials)
+  // console.log(socials)
 
   return (
     <header className="sticky top-0 flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto">
@@ -28,7 +28,7 @@ const Header = ({ socials }: Props) => {
         transition={{ duration: 1.5 }}
       >
         {/* social icons */}
-        {socials.map((social) =>
+        {/* {socials.map((social) =>
           social.url ? (
             <a
               key={social._id}
@@ -48,9 +48,9 @@ const Header = ({ socials }: Props) => {
               </>
             </a>
           )
-        )}
-        {/* <a
-          href="https://www.linkedin.com/in/juliocesarrojasjr/"
+        )} */}
+        <a
+          href={socials[0].url}
           target="_blank"
           rel="noreferrer"
           className="headerButton p-1.5"
@@ -59,16 +59,16 @@ const Header = ({ socials }: Props) => {
         </a>
 
         <a
-          href="https://github.com/juliorojas81871"
+          href={socials[1].url}
           target="_blank"
           rel="noreferrer"
           className="headerButton p-1.5"
         >
           <BsGithub size={25} />
         </a>
-        <a className="headerButton p-1.5">
+        <a className="headerButton p-1.5" download={true} >
           <BsFillPersonLinesFill size={26} />
-        </a> */}
+        </a>
       </motion.div>
       <Link href="#contact">
         <motion.div
