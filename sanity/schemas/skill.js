@@ -24,5 +24,17 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+    }
+  ],
+  orderings: [
+    {
+      title: "SkillOrder",
+      name: "skillOrder",
+      by: [{ field: "order", direction: "asc" }],
+    },
   ],
 };

@@ -49,6 +49,8 @@ interface SanityBody {
     image: Image;
     progress: number;
     title: string;
+    icon: string;
+    pdf: file;
   }
   
   export interface Project extends SanityBody {
