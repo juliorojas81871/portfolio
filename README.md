@@ -11,7 +11,7 @@ NextJS, ReactJS, TailwindCSS, React Icons, TypeScript, JavaScript, Sanity.io, Ge
 
 ## Steps to get code to run:
 1. Open terminal
-2. Type (You can also download the code):
+2. Type (You can also download the code): 
 ```
 git clone https://github.com/juliorojas81871/portfolio
 ```
