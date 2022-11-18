@@ -11,12 +11,7 @@ import {
 import Link from "next/link";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { PageInfo, Skill, Social, Project, Timeline } from "../typings";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchSocial } from "../utils/fetchSocials";
 import { GetStaticProps } from "next";
-import { fetchProjects } from "../utils/fetchProjects";
-import { fetchTimeline } from "../utils/fetchTimeline";
 import { sanityClient } from "../sanity";
 
 type Props = {
@@ -80,12 +75,6 @@ const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  // const pageInfo: PageInfo = await fetchPageInfo();
-  // const skills: Skill[] = await fetchSkills();
-  // const socials: Social[] = await fetchSocial();
-  // const projects: Project[] = await fetchProjects();
-  // const timelines: Timeline[] = await fetchTimeline();
-
   const { pageInfo, skills, socials, projects, timelines } =
     await sanityClient.fetch(`{
     "pageInfo": *[_type == "pageInfo"][0],
@@ -94,11 +83,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       ...,
       "downloadUrl": pdf.asset->url
     },
-    "projects": *[_type == "project"] {
+    "projects": *[_type == "project"] | order(order asc){
       ...,
       technologies[]->
     },
-    "timelines": *[_type == "timeline"] {
+    "timelines": *[_type == "timeline"] | order(dateEnded asc){
       ...,
       technologies[]->
     }

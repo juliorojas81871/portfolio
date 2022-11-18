@@ -23,12 +23,9 @@ const Projects = ({ projects }: Props) => {
         {projects.map((project, i) => (
           <motion.div
             key={project._id}
-            className="w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-20 md:p-44 h-screen"
+            className="w-screen flex flex-col md:space-y-5 items-center justify-center flex-shrink-0 snap-center p-9 md:p-44 h-screen"
           >
-            <Link
-              key={project._id}
-              href="https://github.com/juliorojas81871/amazon-clone"
-            >
+            <Link key={project._id} href={project.linkToBuild}>
               <motion.img
                 initial={{
                   y: -300,
@@ -53,8 +50,8 @@ const Projects = ({ projects }: Props) => {
                   <Image
                     className="rounded-full"
                     src={urlFor(technology.image).url()}
-                    width={40}
-                    height={40}
+                    width={35}
+                    height={35}
                     alt=""
                   />
                 ))}

@@ -11,11 +11,7 @@ const DynamicIcon: React.FC<{
   className?: string;
   size?: number;
 }> = ({ name, className, size }) => {
-  console.log("ICON NAME", name);
   const Icon = BS[name || "BsQuestionCircle"] || BS.BsQuestionCircle;
-
-  console.log("Icon", Icon);
-
   return <Icon size={size} className={className} />;
 };
 
@@ -23,8 +19,6 @@ interface Props {
   socials: Social[];
 }
 const Header = ({ socials }: Props) => {
-  // console.log(socials)
-
   return (
     <header className="sticky top-0 flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto">
       <motion.div

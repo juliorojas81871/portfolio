@@ -33,5 +33,17 @@ export default {
       title: "LinkToBuild",
       type: "url",
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+    },
+  ],
+  orderings: [
+    {
+      title: "SkillOrder",
+      name: "skillOrder",
+      by: [{ field: "order", direction: "asc" }],
+    },
   ],
 };
