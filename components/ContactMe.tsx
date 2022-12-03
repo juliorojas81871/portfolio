@@ -27,19 +27,32 @@ const ContactMe = ({ pageInfo }: Props) => {
         <div className="space-y-2 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
-            <a className="md:text-2xl" href={`callto:${pageInfo.phoneNumber}`}>
+            <a
+              className="md:text-2xl hover:underline hover:text-[#F7AB0A]"
+              href={`callto:${pageInfo.phoneNumber}`}
+            >
               {pageInfo.phoneNumber}
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
-            <a className="md:text-2xl" href={`mailto:${pageInfo.email}`}>
+            <a
+              className="md:text-2xl hover:underline hover:text-[#F7AB0A]"
+              href={`mailto:${pageInfo.email}`}
+            >
               {pageInfo.email}
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7  animate-pulse" />
-            <p className="md:text-2xl">{pageInfo.address}</p>
+            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
+            <a
+              className="md:text-2xl hover:underline hover:text-[#F7AB0A]"
+              href={`${pageInfo.addressMap}`}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              {pageInfo.address}
+            </a>
           </div>
         </div>
         <form

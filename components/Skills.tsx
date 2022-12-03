@@ -13,7 +13,7 @@ const Skills = ({ skills }: Props) => {
       whileInView={{ opacity: 1 }}
       //   viewport={{ once: true }}
       transition={{ duration: 1.5 }}
-      className="md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80  flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
+      className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills

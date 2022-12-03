@@ -12,7 +12,7 @@ const Skill = ({ directionLeft, skill }: Props) => {
     <div className="group relative flex cursor-pointer">
       <motion.img
         initial={{
-          x: directionLeft ? -82 : 82,
+          x: directionLeft ? -80 : 80,
         }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}

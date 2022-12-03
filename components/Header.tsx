@@ -4,7 +4,6 @@ import * as BS from "react-icons/bs";
 import { VscMail } from "react-icons/vsc";
 import { Social } from "../typings";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
 const DynamicIcon: React.FC<{
   name?: keyof typeof BS;

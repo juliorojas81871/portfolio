@@ -50,6 +50,11 @@ export default {
       type: "string",
     },
     {
+      name: "addressMap",
+      title: "AddressMap",
+      type: "string",
+    },
+    {
       name: "socials",
       title: "Socials",
       type: "array",
