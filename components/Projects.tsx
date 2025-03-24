@@ -53,6 +53,7 @@ const Projects = ({ projects }: Props) => {
               <div className="flex space-x-2 my-2">
                 {project.technologies.map((technology) => (
                   <Image
+                    key={technology._id}
                     className="rounded-full"
                     src={urlFor(technology.image).url()}
                     width={35}

@@ -18,13 +18,15 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <Image
-        className="relative rounded-full mx-auto object-cover"
-        width={128}
-        height={128}
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt=""
-      />
+      <div className="relative h-32 w-32 mx-auto">
+        <Image
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt={pageInfo?.name}
+          fill
+          className="rounded-full object-cover"
+          sizes="(max-width: 768px) 128px"
+        />
+      </div>
       <div className="z-20 relative">
         <h2 className="tracking-[15px] text-sm uppercase text-gray-500 pb-2">
           {pageInfo?.role}
