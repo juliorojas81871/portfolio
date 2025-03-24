@@ -26,18 +26,19 @@ const ExperienceEducationCard = ({ timeline }: Props) => {
           {timeline.title}
         </h4>
         <p className="font-bold sm:text-2xl mt-1">{timeline.location}</p>
-        <div className="flex space-x-2 my-2">
+        <div className="flex flex-wrap gap-2 my-2">
           {/* tech used */}
           {timeline.technologies &&
             timeline.technologies.map((technology) => (
-              <Image
-                key={technology._id}
-                className="rounded-full"
-                src={urlFor(technology.image).url()}
-                width={40}
-                height={40}
-                alt=""
-              />
+              <div key={technology._id} className="relative w-[30px] h-[30px] sm:w-[35px] sm:h-[35px] md:w-[40px] md:h-[40px]">
+                <Image
+                  src={urlFor(technology.image).url()}
+                  alt=""
+                  fill
+                  className="rounded-full object-cover"
+                  sizes="(max-width: 640px) 30px, (max-width: 768px) 35px, 40px"
+                />
+              </div>
             ))}
         </div>
         <p className="uppercase py-5 text-gray-300">
