@@ -25,6 +25,7 @@ const Hero = ({ pageInfo }: Props) => {
           fill
           className="rounded-full object-cover"
           sizes="(max-width: 768px) 128px"
+          priority
         />
       </div>
       <div className="z-20 relative">
