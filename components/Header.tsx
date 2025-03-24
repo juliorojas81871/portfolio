@@ -48,6 +48,7 @@ const Header = ({ socials }: Props) => {
             </a>
           ) : (
             <a
+              key={social._id}
               className="headerButton p-1.5"
               href={social.downloadUrl}
               rel="noreferrer noopener"
@@ -73,7 +74,7 @@ const Header = ({ socials }: Props) => {
           transition={{ duration: 1 }}
           className="flex flex-row items-center headerButton p-1.5"
         >
-          <VscMail size={25} stroke-width="0.5" />
+          <VscMail size={25} strokeWidth="0.5" />
           <p className="pl-2 uppercase hidden md:inline-flex text-sm ">
             Get In Touch
           </p>
