@@ -7,9 +7,10 @@ interface Props {
   directionLeft?: boolean;
   skill: SkillType;
   isActive?: boolean;
+  isHovered?: boolean;
 }
 
-const Skill = ({ directionLeft, skill, isActive = false }: Props) => {
+const Skill = ({ directionLeft, skill, isActive = false, isHovered = false }: Props) => {
   const [isAnimationComplete] = useState(true);
 
   return (
@@ -20,12 +21,12 @@ const Skill = ({ directionLeft, skill, isActive = false }: Props) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         src={urlFor(skill.image).url()}
-        className={`rounded-full border border-gray-500 object-cover h-[calc(20vh-80px)] w-[calc(20vh-80px)] md:w-28 md:h-28 xl:w-32 xl:h-32 filter transition duration-0 ease-in-out ${
-          isAnimationComplete ? (isActive ? "grayscale" : "group-hover:grayscale") : "grayscale-0"
+        className={`rounded-full border border-gray-500 object-cover h-[calc(20vh-80px)] w-[calc(20vh-80px)] md:w-28 md:h-28 xl:w-32 xl:h-32 filter transition duration-300 ease-in-out ${
+          isHovered || isActive ? "grayscale" : "grayscale-0"
         }`}
       />
-      <div className={`absolute transition duration-0 ease-in-out bg-white h-[calc(20vh-80px)] w-[calc(20vh-80px)] md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0 ${
-        isAnimationComplete ? (isActive ? "opacity-80" : "opacity-0 group-hover:opacity-80") : ""
+      <div className={`absolute inset-0 transition duration-300 ease-in-out bg-white rounded-full z-0 ${
+        isHovered || isActive ? "opacity-80" : "opacity-0"
       }`}>
       </div>
     </div>

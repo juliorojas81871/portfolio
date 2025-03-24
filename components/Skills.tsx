@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Skill } from "./";
 import { Skill as SkillType } from "../typings";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { Cursor } from "react-simple-typewriter";
 import { useState, useEffect } from "react";
 
 interface Props {
@@ -10,21 +10,50 @@ interface Props {
 
 const Skills = ({ skills }: Props) => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
-  const [shownWords, setShownWords] = useState<Set<string>>(new Set());
-  const [text, count] = useTypewriter({
-    words: [skills[currentSkillIndex]?.title || "Hover over a skill for current proficiency"],
-    loop: false,
-    delaySpeed: 1000,
-    typeSpeed: 20,
-    deleteSpeed: 20,
-  });
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  const currentWord = hoveredSkill || skills[currentSkillIndex]?.title || "Hover over a skill for current proficiency";
 
   useEffect(() => {
-    const currentWord = skills[currentSkillIndex]?.title || "Hover over a skill for current proficiency";
-    if (!shownWords.has(currentWord)) {
-      setShownWords(prev => new Set(Array.from(prev).concat(currentWord)));
-    }
-  }, [currentSkillIndex, skills, shownWords]);
+    setIsTyping(true);
+    let currentIndex = 0;
+    let isDeleting = false;
+
+    const interval = setInterval(() => {
+      if (isDeleting) {
+        if (currentIndex > 0) {
+          setDisplayedText(currentWord.slice(0, currentIndex));
+          currentIndex--;
+        } else {
+          isDeleting = false;
+          currentIndex = 0;
+        }
+      } else {
+        if (currentIndex <= currentWord.length) {
+          setDisplayedText(currentWord.slice(0, currentIndex));
+          currentIndex++;
+        } else {
+          clearInterval(interval);
+        }
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(interval);
+      isDeleting = true;
+    };
+  }, [currentSkillIndex, currentWord, hoveredSkill]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (!hoveredSkill) {
+        setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % skills.length);
+      }
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [skills.length, hoveredSkill]);
 
   return (
     <motion.div
@@ -38,9 +67,7 @@ const Skills = ({ skills }: Props) => {
         Skills
       </h3>
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-        <span>{shownWords.has(skills[currentSkillIndex]?.title || "Hover over a skill for current proficiency") 
-          ? (skills[currentSkillIndex]?.title || "Hover over a skill for current proficiency")
-          : text}</span>
+        <span>{displayedText}</span>
         <Cursor cursorColor="#F7AB0A" />
       </h3>
       <div className="grid grid-cols-4 gap-5">
@@ -48,9 +75,14 @@ const Skills = ({ skills }: Props) => {
           <div 
             key={skill._id} 
             className="transition-all duration-300"
-            onMouseEnter={() => setCurrentSkillIndex(index)}
+            onMouseEnter={() => setHoveredSkill(skill.title)}
+            onMouseLeave={() => setHoveredSkill(null)}
           >
-            <Skill skill={skill} isActive={index === currentSkillIndex} />
+            <Skill 
+              skill={skill} 
+              isActive={!hoveredSkill && index === currentSkillIndex} 
+              isHovered={hoveredSkill === skill.title}
+            />
           </div>
         ))}
 
@@ -59,9 +91,15 @@ const Skills = ({ skills }: Props) => {
           <div 
             key={skill._id} 
             className="transition-all duration-300"
-            onMouseEnter={() => setCurrentSkillIndex(index + skills.length / 2)}
+            onMouseEnter={() => setHoveredSkill(skill.title)}
+            onMouseLeave={() => setHoveredSkill(null)}
           >
-            <Skill skill={skill} directionLeft isActive={index + skills.length / 2 === currentSkillIndex} />
+            <Skill 
+              skill={skill} 
+              directionLeft 
+              isActive={!hoveredSkill && index + skills.length / 2 === currentSkillIndex} 
+              isHovered={hoveredSkill === skill.title}
+            />
           </div>
         ))}
       </div>
