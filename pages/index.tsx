@@ -87,7 +87,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       ...,
       technologies[]->
     },
-    "timelines": *[_type == "timeline"] | order(dateEnded asc){
+    "timelines": *[_type == "timeline"] | order(dateEnded desc){
       ...,
       technologies[]->
     }
