@@ -4,13 +4,12 @@ import { urlFor } from "../sanity";
 import { useState } from "react";
 
 interface Props {
-  directionLeft?: boolean;
   skill: SkillType;
   isActive?: boolean;
   isHovered?: boolean;
 }
 
-const Skill = ({ directionLeft, skill, isActive = false, isHovered = false }: Props) => {
+const Skill = ({ skill, isActive = false, isHovered = false }: Props) => {
   const [isAnimationComplete] = useState(true);
 
   return (
@@ -25,7 +24,7 @@ const Skill = ({ directionLeft, skill, isActive = false, isHovered = false }: Pr
           isHovered || isActive ? "grayscale" : "grayscale-0"
         }`}
       />
-      <div className={`absolute inset-0 transition duration-300 ease-in-out bg-white rounded-full z-0 ${
+      <div className={`absolute inset-0 transition duration-300 ease-in-out bg-[#F7AB0A]/40 rounded-full z-0 ${
         isHovered || isActive ? "opacity-80" : "opacity-0"
       }`}>
       </div>
