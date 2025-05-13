@@ -72,13 +72,13 @@ const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
+        <footer className="sticky bottom-5 w-full">
           <div className="flex items-center justify-center">
-            <BsFillArrowUpCircleFill className="text-[#F7AB0A] h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" />
+          <Link href="#hero">
+              <BsFillArrowUpCircleFill className="text-[#F7AB0A] h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" />
+            </Link>
           </div>
         </footer>
-      </Link>
     </div>
   );
 };

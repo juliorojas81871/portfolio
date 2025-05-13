@@ -59,7 +59,6 @@ const Skills = ({ skills }: Props) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      //   viewport={{ once: true }}
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
@@ -70,33 +69,17 @@ const Skills = ({ skills }: Props) => {
         <span>{displayedText}</span>
         <Cursor cursorColor="#F7AB0A" />
       </h3>
-      <div className="grid grid-cols-4 gap-5">
-        {skills?.slice(0, skills.length / 2).map((skill, index) => (
+      <div className="grid grid-cols-4 gap-5 relative">
+        {skills?.map((skill, index) => (
           <div 
             key={skill._id}
-            className="transition-all duration-300"
+            className="transition-all duration-300 relative w-[calc(20vh-80px)] h-[calc(20vh-80px)] md:w-28 md:h-28 xl:w-32 xl:h-32"
             onMouseEnter={() => setHoveredSkill(skill.title)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
             <Skill
               skill={skill}
               isActive={!hoveredSkill && index === currentSkillIndex}
-              isHovered={hoveredSkill === skill.title}
-            />
-          </div>
-        ))}
-
-        {/* Get second half of skills and map with direction left */}
-        {skills?.slice(skills.length / 2, skills.length).map((skill, index) => (
-          <div
-            key={skill._id}
-            className="transition-all duration-300"
-            onMouseEnter={() => setHoveredSkill(skill.title)}
-            onMouseLeave={() => setHoveredSkill(null)}
-          >
-            <Skill
-              skill={skill}
-              isActive={!hoveredSkill && index + skills.length / 2 === currentSkillIndex}
               isHovered={hoveredSkill === skill.title}
             />
           </div>

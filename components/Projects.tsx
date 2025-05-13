@@ -77,13 +77,12 @@ const Projects = ({ projects }: Props) => {
               target="_blank"
             >
               <motion.div
-                initial={{
-                  y: -280,
-                }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="relative w-[300px] h-[200px] sm:w-[400px] sm:h-[250px] md:w-[500px] md:h-[300px] mx-auto"
+                style={{ position: 'relative' }}
               >
                 <Image
                   src={urlFor(project?.image).url()}
@@ -91,6 +90,7 @@ const Projects = ({ projects }: Props) => {
                   fill
                   className="object-contain cursor-pointer"
                   sizes="(max-width: 640px) 300px, (max-width: 768px) 400px, 500px"
+                  style={{ position: 'absolute' }}
                 />
               </motion.div>
             </Link>
