@@ -13,6 +13,7 @@ import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { PageInfo, Skill, Social, Project, Timeline } from "../typings";
 import { GetStaticProps } from "next";
 import { sanityClient } from "../sanity";
+import { useEffect } from "react";
 
 type Props = {
   pageInfo: PageInfo;
@@ -23,8 +24,18 @@ type Props = {
 };
 
 const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Cleanup
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen overflow-y-scroll z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
         <title>JR Portfolio</title>
         <link rel="icon" href="/icon.jpg" />
@@ -32,32 +43,32 @@ const Home = ({ skills, pageInfo, socials, projects, timelines }: Props) => {
       <Header socials={socials} />
 
       {/* hero */}
-      <section id="hero" className="snap-start">
+      <section id="hero" className="min-h-screen">
         <Hero pageInfo={pageInfo} />
       </section>
 
       {/* about */}
-      <section id="about" className="snap-start">
+      <section id="about" className="min-h-screen">
         <About pageInfo={pageInfo} />
       </section>
 
       {/* Experience / Education */}
-      <section id="timeline" className="snap-start">
+      <section id="timeline" className="min-h-screen">
         <TimeLine timelines={timelines} />
       </section>
 
       {/* skill */}
-      <section id="skills" className="snap-start">
+      <section id="skills" className="min-h-screen">
         <Skills skills={skills} />
       </section>
 
       {/* projects */}
-      <section id="projects" className="snap-start">
+      <section id="projects" className="min-h-screen">
         <Projects projects={projects} />
       </section>
 
       {/* contact me */}
-      <section id="contact" className="snap-start">
+      <section id="contact" className="min-h-screen">
         <ContactMe pageInfo={pageInfo} />
       </section>
 

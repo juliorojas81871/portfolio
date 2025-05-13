@@ -73,14 +73,14 @@ const Skills = ({ skills }: Props) => {
       <div className="grid grid-cols-4 gap-5">
         {skills?.slice(0, skills.length / 2).map((skill, index) => (
           <div 
-            key={skill._id} 
+            key={skill._id}
             className="transition-all duration-300"
             onMouseEnter={() => setHoveredSkill(skill.title)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
-            <Skill 
-              skill={skill} 
-              isActive={!hoveredSkill && index === currentSkillIndex} 
+            <Skill
+              skill={skill}
+              isActive={!hoveredSkill && index === currentSkillIndex}
               isHovered={hoveredSkill === skill.title}
             />
           </div>
@@ -88,15 +88,15 @@ const Skills = ({ skills }: Props) => {
 
         {/* Get second half of skills and map with direction left */}
         {skills?.slice(skills.length / 2, skills.length).map((skill, index) => (
-          <div 
-            key={skill._id} 
+          <div
+            key={skill._id}
             className="transition-all duration-300"
             onMouseEnter={() => setHoveredSkill(skill.title)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
-            <Skill 
-              skill={skill}  
-              isActive={!hoveredSkill && index + skills.length / 2 === currentSkillIndex} 
+            <Skill
+              skill={skill}
+              isActive={!hoveredSkill && index + skills.length / 2 === currentSkillIndex}
               isHovered={hoveredSkill === skill.title}
             />
           </div>

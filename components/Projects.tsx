@@ -12,26 +12,42 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextProject = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
+    const nextIndex = (currentIndex + 1) % projects.length;
     container.scrollTo({
-      left: container.scrollLeft + container.clientWidth,
+      left: container.clientWidth * nextIndex,
       behavior: "smooth",
     });
+    setCurrentIndex(nextIndex);
   };
 
   const prevProject = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
+    const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
     container.scrollTo({
-      left: container.scrollLeft - container.clientWidth,
+      left: container.clientWidth * prevIndex,
       behavior: "smooth",
     });
+    setCurrentIndex(prevIndex);
   };
+
+  useEffect(() => {
+    if (!scrollContainerRef.current || isHovered) return;
+
+    const interval = setInterval(() => {
+      nextProject();
+    }, 8000); // Increased to 8 seconds
+
+    return () => clearInterval(interval);
+  }, [currentIndex, isHovered]);
 
   return (
     <motion.div
@@ -46,6 +62,8 @@ const Projects = ({ projects }: Props) => {
       <div
         ref={scrollContainerRef}
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-none"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         {projects.map((project, i) => (
           <motion.div
