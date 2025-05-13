@@ -5,11 +5,12 @@ import { urlFor } from "../sanity";
 
 interface Props {
   timeline: Timeline;
+  isActive?: boolean;
 }
 
-const ExperienceEducationCard = ({ timeline }: Props) => {
+const ExperienceEducationCard = ({ timeline, isActive = false }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[340px] max-h-[calc(100vh-260px)] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-hide">
+    <article className={`flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[340px] max-h-[calc(100vh-260px)] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 ${isActive ? 'opacity-100' : 'opacity-40'} cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-hide`}>
       <motion.div
         initial={{
           y: -100,
