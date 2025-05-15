@@ -70,8 +70,8 @@ const Skills = ({ skills }: Props) => {
         <Cursor cursorColor="#F7AB0A" />
       </h3>
       <div className="grid grid-cols-4 gap-5 relative">
-        {skills?.map((skill, index) => (
-          <div 
+        {skills?.slice(0, 16).map((skill, index) => (
+          <div
             key={skill._id}
             className="transition-all duration-300 relative w-[calc(20vh-80px)] h-[calc(20vh-80px)] md:w-28 md:h-28 xl:w-32 xl:h-32"
             onMouseEnter={() => setHoveredSkill(skill.title)}
